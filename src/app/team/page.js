@@ -11,7 +11,7 @@ const HomePage = async () => {
     const sortedPosts = posts.sort((a, b) => {
         const priorityA = a.properties.Priority.number || 0;
         const priorityB = b.properties.Priority.number || 0;
-        return priorityA - priorityB; // Change to priorityA - priorityB for ascending order
+        return priorityA - priorityB;
       });
     
       return (
@@ -26,7 +26,6 @@ const HomePage = async () => {
               src={post.properties.Photo.files[0]?.file?.url || ''} 
               style={{ width: '100px', height: '100px' }}
                />
-                {/* Add more properties as needed */}
               </li>
             ))}
           </ul>
